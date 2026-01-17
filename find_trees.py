@@ -23,7 +23,7 @@ def find_trees(image_path:str):
         import crb_roadside as crb
         
         model = initialize_model()
-        image_path = "images/20251129_152106.jpg"        
+        image_path = "/home/aubrey/Desktop/Efate2025/original_images/20251129_152106.jpg"        
         results = find_trees(image_path)
         This will save annotated images and cropped detections in the 'annotated_images' directory.
     """
