@@ -9,4 +9,5 @@ This repository contains a python package for analysing images from roadside sur
 If you are using `uv` for your Python project, you can add this package directly from GitHub:
 
 ```bash
-uv add git+[https://github.com/aubreymoore/crb-damage.git](https://github.com/aubreymoore/crb-damage.git)
+uv add git+https://github.com/aubreymoore/crb-damage.git
+```
