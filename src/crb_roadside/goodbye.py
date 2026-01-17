@@ -1,2 +1,2 @@
 def goodbye():
-    print("Goodbye")
+    return "Goodbye"
