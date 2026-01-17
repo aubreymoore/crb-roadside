@@ -7,9 +7,10 @@ def initialize_model():
     model.set_classes(names, model.get_text_pe(names))
     return model
 
-def find_trees(image_path:str):
+def find_trees(model, image_path:str):
     """ 
     Detects coconut palm trees in an image using YOLOE model.
+    Annotated images and cropped detections in the automatically created 'annotated_images' directory.
 
     IMPORTANT NOTES: 
     
@@ -22,10 +23,9 @@ def find_trees(image_path:str):
     Usage:
         import crb_roadside as crb
         
-        model = initialize_model()
+        model = crb.initialize_model()
         image_path = "/home/aubrey/Desktop/Efate2025/original_images/20251129_152106.jpg"        
-        results = find_trees(image_path)
-        This will save annotated images and cropped detections in the 'annotated_images' directory.
+        results = crb.find_trees(image_path)
     """
 
     results = model.predict(
