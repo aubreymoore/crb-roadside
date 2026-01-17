@@ -1,6 +1,6 @@
-# My Awesome Package
+# crb-roadside
 
-A brief description of what your package does.
+This repository contains a python package for analysing images from roadside surveys of coconut rhinoceros beetle damage.
 
 ## Installation
 
@@ -9,4 +9,4 @@ A brief description of what your package does.
 If you are using `uv` for your Python project, you can add this package directly from GitHub:
 
 ```bash
-uv add git+[https://github.com/YOUR_USERNAME/my-awesome-package.git](https://github.com/YOUR_USERNAME/my-awesome-package.git)
+uv add git+[https://github.com/aubreymoore/crb-damage.git](https://github.com/aubreymoore/crb-damage.git)
