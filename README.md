@@ -10,7 +10,12 @@ If you are using `uv` for your Python project, you can add this package directly
 uv add git+https://github.com/aubreymoore/crb-damage.git
 ```
 
-If you are using `pip`, use:
+To update the package to the latest version on the main branch:
+```bash
+uv add --upgrade git+https://github.com/aubreymoore/crb-roadside.git
+```
+
+If you are using `pip`:
 
 ```bash
 pip install git+https://github.com/aubreymoore/crb-damage.git
