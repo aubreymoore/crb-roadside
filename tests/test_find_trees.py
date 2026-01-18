@@ -42,6 +42,5 @@ def test_find_trees(tmp_path, monkeypatch):
  
     # test find_trees()
     results = crb.find_trees(model, test_image_path)
-    print('len(results)', len(results))
     assert len(results) == 1
  
