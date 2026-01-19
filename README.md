@@ -2,7 +2,7 @@
 
 This repository contains a python package for analysing images from roadside surveys of coconut rhinoceros beetle damage.
 
-[source code documentation]()
+[source code documentation](docs/build/html/genindex.html)
 
 ## Installation
 
