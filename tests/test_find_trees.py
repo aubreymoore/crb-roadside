@@ -23,9 +23,9 @@ def test_find_trees(tmp_path, monkeypatch):
     """
     
     # get the absolute path of the test image
-    test_image_path = os.path.abspath('data/20251129_152106.jpg')
-    print(test_image_path)
-    assert os.path.exists(test_image_path)
+    image_path = os.path.abspath('data/20251129_152106.jpg')
+    print(image_path)
+    assert os.path.exists(image_path)
     
     # Change the current working directory to the tmp_path provided by pytest
     print(f'tmp_path is {tmp_path} which will be permanently deleted on the next system boot.')
@@ -41,6 +41,14 @@ def test_find_trees(tmp_path, monkeypatch):
     assert (tmp_path / "mobileclip_blt.ts").exists()
  
     # test find_trees()
-    results = crb.find_trees(model, test_image_path)
+    results = crb.find_trees(model, image_path)
     assert len(results) == 1
+    
+    # test update_images_table()
+    db_path = 'test.sqlite3'
+    crb.update_images_table(image_path, db_path)
+    assert (tmp_path / db_path).exists()
+    
+    # test update_detections_table()
+    crb.update_detections_table(results, image_path, db_path)
  
