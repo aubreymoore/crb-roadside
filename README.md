@@ -2,6 +2,8 @@
 
 This repository contains a python package for analysing images from roadside surveys of coconut rhinoceros beetle damage.
 
+[source code documentation]()
+
 ## Installation
 
 If you are using `uv` for your Python project, you can add this package directly from GitHub:
