@@ -2,6 +2,8 @@
 
 This repository contains a python package for analysing images from roadside surveys of coconut rhinoceros beetle damage.
 
+https://aubreymoore.github.io/crb-roadside/docs/build/html/crb_roadside.html#module-crb_roadside.update_db.html
+
 [source code documentation](docs/build/html/genindex.html)
 
 ## Installation
