@@ -19,7 +19,8 @@ author = 'Aubrey Moore'
 
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme',
+    'sphinx.ext.githubpages'
 ]
 
 templates_path = ['_templates']
