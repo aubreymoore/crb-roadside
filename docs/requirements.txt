@@ -1,0 +1,2 @@
+sphinx-rtd-theme
+# Add any other dependencies your project needs for building here
