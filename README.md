@@ -2,9 +2,7 @@
 
 This repository contains a python package for analysing images from roadside surveys of coconut rhinoceros beetle damage.
 
-https://aubreymoore.github.io/crb-roadside/docs/build/html/crb_roadside.html#module-crb_roadside.update_db.html
-
-[source code documentation](docs/build/html/genindex.html)
+[documentation](https://aubreymoore.github.io/crb-roadside/docs/build/html/crb_roadside.html#module-crb_roadside.html)
 
 ## Installation
 
@@ -24,3 +22,19 @@ If you are using `pip`:
 ```bash
 pip install git+https://github.com/aubreymoore/crb-roadside.git
 ```
+
+## Usage example
+```python
+import crb_roadside as crb
+
+# initialize model if it does not already exist
+try:
+    model
+except NameError:
+    model = crb.initialize_model()
+
+# detect coconut palm trees in a specified image
+image_path = “/home/aubrey/Desktop/Efate2025/original_images/20251129_152106.jpg” 
+results = crb.find_trees(image_path)
+```
+
