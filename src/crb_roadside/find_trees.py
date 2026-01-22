@@ -9,7 +9,7 @@ def initialize_model():
 
 def find_trees(model, image_path:str):
     """ 
-    xDetects coconut palm trees in an image using YOLOE model.
+    Detects coconut palm trees in an image using YOLOE model.
     Annotated images and cropped detections in the automatically created 'annotated_images' directory.
 
     IMPORTANT NOTES: 
