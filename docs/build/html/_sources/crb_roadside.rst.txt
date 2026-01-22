@@ -20,6 +20,14 @@ crb\_roadside.update\_db module
    :show-inheritance:
    :undoc-members:
 
+crb\_roadside.visualize module
+------------------------------
+
+.. automodule:: crb_roadside.visualize
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 Module contents
 ---------------
 
