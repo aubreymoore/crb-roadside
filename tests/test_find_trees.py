@@ -51,4 +51,10 @@ def test_find_trees(tmp_path, monkeypatch):
     
     # test update_detections_table()
     crb.update_detections_table(results, image_path, db_path)
- 
+    
+    # test create_51_dataset()
+    dataset_name = 'test_dataset'
+    crb.create_51_dataset(results[0], dataset_name)
+    
+    # launch fiftyone app to visualize dataset
+    fo.launch_app(dataset_name, auto=False)
