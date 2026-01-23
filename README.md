@@ -38,3 +38,5 @@ image_path = “/home/aubrey/Desktop/Efate2025/original_images/20251129_152106.j
 results = crb.find_trees(image_path)
 ```
 
+
+

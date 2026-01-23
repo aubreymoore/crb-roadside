@@ -1,4 +1,5 @@
 # Python-generated files
+.pytest_cache
 __pycache__/
 *.py[oc]
 # build/
@@ -8,3 +9,7 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Model files
+yoloe-11l-seg.pt
+mobileclip_blt.ts

@@ -27,12 +27,12 @@ def test_find_trees(tmp_path, monkeypatch):
     print(image_path)
     assert os.path.exists(image_path)
     
-    # Change the current working directory to the tmp_path provided by pytest
-    print(f'tmp_path is {tmp_path} which will be permanently deleted on the next system boot.')
-    monkeypatch.chdir(tmp_path)
-    current_dir = Path.cwd()
-    assert current_dir == tmp_path
-    # Now, any operations that rely on the current working directory will use tmp_path
+    # # Change the current working directory to the tmp_path provided by pytest
+    # print(f'tmp_path is {tmp_path} which will be permanently deleted on the next system boot.')
+    # monkeypatch.chdir(tmp_path)
+    # current_dir = Path.cwd()
+    # assert current_dir == tmp_path
+    # # Now, any operations that rely on the current working directory will use tmp_path
   
     # test initialize_model()
     print('testing initialize_model(). This will take several minutes to complete.')

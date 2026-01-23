@@ -1,5 +1,5 @@
 import fiftyone as fo
-import fiftyone.utils as fou
+import fiftyone.utils.ultralytics as fou
 
 def list_51_datasets():
     """
@@ -29,7 +29,7 @@ def create_51_dataset(result, dataset_name):
     # dataset.add_sample(sample)
 
     # instances (boxes + masks)
-    sample = fo.Sample(filepath=result["image_path"])    
+    sample = fo.Sample(filepath=result["path"])    
     sample["instances"] = fou.to_instances(result)
     dataset.add_sample(sample)
     
