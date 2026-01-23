@@ -13,3 +13,9 @@ wheels/
 # Model files
 yoloe-11l-seg.pt
 mobileclip_blt.ts
+
+# Database files
+*.sqlite3
+
+# oUTPUT FILES
+annotated_images/

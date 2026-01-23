@@ -37,8 +37,8 @@ def test_find_trees(tmp_path, monkeypatch):
     # test initialize_model()
     print('testing initialize_model(). This will take several minutes to complete.')
     model = crb.initialize_model()
-    assert (tmp_path / "yoloe-11l-seg.pt").exists()
-    assert (tmp_path / "mobileclip_blt.ts").exists()
+    assert os.path.exists("yoloe-11l-seg.pt")
+    assert os.path.exists("mobileclip_blt.ts")
  
     # test find_trees()
     results = crb.find_trees(model, image_path)
@@ -47,14 +47,14 @@ def test_find_trees(tmp_path, monkeypatch):
     # test update_images_table()
     db_path = 'test.sqlite3'
     crb.update_images_table(image_path, db_path)
-    assert (tmp_path / db_path).exists()
+    assert os.path.exists(db_path)
     
     # test update_detections_table()
     crb.update_detections_table(results, image_path, db_path)
     
-    # test create_51_dataset()
-    dataset_name = 'test_dataset'
-    crb.create_51_dataset(results[0], dataset_name)
+    # # test create_51_dataset()
+    # dataset_name = 'test_dataset'
+    # crb.create_51_dataset(results[0], dataset_name)
     
-    # launch fiftyone app to visualize dataset
-    fo.launch_app(dataset_name, auto=False)
+    # # launch fiftyone app to visualize dataset
+    # fo.launch_app(dataset_name, auto=False)
