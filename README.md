@@ -31,6 +31,11 @@ cd crb-roadside
 uv sync
 ```
 
+To run unit tests:
+```bash]
+uv run pytest -sh
+```
+
 ## Usage example
 ```python
 import crb_roadside as crb
