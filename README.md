@@ -23,6 +23,14 @@ If you are using `pip`:
 pip install git+https://github.com/aubreymoore/crb-roadside.git
 ```
 
+## Cloning the repository for further development of the package (optional)
+
+```bash
+git clone https://github.com/aubreymoore/crb-roadside
+cd crb-roadside
+uv sync
+```
+
 ## Usage example
 ```python
 import crb_roadside as crb
