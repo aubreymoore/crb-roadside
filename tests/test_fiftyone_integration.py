@@ -32,6 +32,11 @@ def test_fiftyone_integration():
     crb.add_instances_to_51_dataset(results[0], dataset)
     assert len(dataset) > 0
     
+    # create a patches view filtered by confidence
+    print("Creating instance patches view sorted and filtered by confidence...")
+    patches_view = crb.create_instance_patches_view(dataset, min_conf=0.0)
+    assert patches_view is not None
+    
     # visualize the dataset in the FiftyOne app
     print("Visualizing the FiftyOne dataset...")
     session = crb.visualize_51_dataset(dataset_name)

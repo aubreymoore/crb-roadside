@@ -2,6 +2,7 @@
 
 import fiftyone as fo
 import fiftyone.utils.ultralytics as fou
+from fiftyone import ViewField as F
 
 def list_51_datasets():
     """
@@ -39,7 +40,26 @@ def add_instances_to_51_dataset(result, dataset):
     sample = fo.Sample(filepath=result.path)    
     sample["instances"] = fou.to_instances(result)
     dataset.add_sample(sample)
-    
+    return dataset
+
+
+def create_instance_patches_view(dataset, min_conf=0.0):
+    """
+    Creates a view of patches for all prediction instances in a FiftyOne dataset, filtered and sorted sorted by confidence.
+    """
+    patches_view = (
+        dataset
+        .filter_labels(
+            "instances",
+            (F("confidence") > min_conf)  # adjust threshold as desired
+        )
+        .to_patches("instances")
+        .sort_by("instances.confidence")
+        )
+    dataset.save_view("instance-patches-by-conf", patches_view)
+    return patches_view
+
+  
 def visualize_51_dataset(dataset_name):
     """
     Launches the FiftyOne app to visualize the dataset identified by dataset_name.

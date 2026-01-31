@@ -21,14 +21,15 @@ def find_trees(model, image_path:str):
     These files are too large for pushing to GitHub so they should be added to .gitignore
     
     Usage:
-        import crb_roadside as crb
-        
-        try:
-            model
-        except NameError:
-            model = crb.initialize_model()
-        image_path = "/home/aubrey/Desktop/Efate2025/original_images/20251129_152106.jpg"        
-        results = crb.find_trees(image_path)
+    
+    import crb_roadside as crb
+    
+    try:
+        model
+    except NameError:
+        model = crb.initialize_model()
+    image_path = "/home/aubrey/Desktop/Efate2025/original_images/20251129_152106.jpg"        
+    results = crb.find_trees(image_path)
     """
     
     results = model.predict(
